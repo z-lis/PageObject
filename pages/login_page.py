@@ -9,7 +9,6 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self, browser):
-        #link = browser.current_url
         assert "login" in browser.current_url, "'login' is not presented in current url"
         # реализуйте проверку на корректный url адрес
         assert True
