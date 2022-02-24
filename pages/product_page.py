@@ -19,7 +19,7 @@ class ProductPage(BasePage):
         assert product_price == basket_price, "Prices do not match"
 
     def should_not_be_success_message(self):
-        assert self.successful_alert(*ProductPageLocators.SUCCESSFUL_ALERT), "Success message is presented, but should not be"
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESSFUL_ALERT), "Success message is presented, but should not be"
 
     def success_message_should_disappear(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESSFUL_ALERT), "Success massage is not disappeared"
